@@ -5,5 +5,5 @@ This project is used to calculate one permuation which is just greater than the 
 
 ## Run
 
-Open index.html file in browser.
+Open `index.html` file in browser.
 
