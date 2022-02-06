@@ -5,7 +5,6 @@ function swap(arr, i, j) {
 }
 
 function rearrange(arr, i, j) {
-	//
 	while (i < j) {
 		swap(arr, i++, j--);
 	}
@@ -30,6 +29,7 @@ function PermutationStep(num) {
 	//convert string to array and sort array in ascending order
 	let stringArray = string.split('');
 	stringArray.sort();
+
 	while (true) {
 		//check if the num is greater than input number 
 		//if true return the value
@@ -45,11 +45,13 @@ function PermutationStep(num) {
 				return -1;
 			}
 		}
+
 		//j is the highest index next to i such that stringArray[j] is greater than stringArray[i-1]
 		let j = l - 1;
 		while (j > i && stringArray[j] <= stringArray[i - 1]) {
 			j--;
 		}
+
 		//swap character of array at index i-1 with index j
 		swap(stringArray, i - 1, j)
 
@@ -62,5 +64,4 @@ function onSubmit() {
 	let inputVal = document.getElementById('inputValue').value;
 	let outputVal = PermutationStep(inputVal);
 	document.getElementById("output").innerHTML = `Output: ${outputVal}`;
-
 }
